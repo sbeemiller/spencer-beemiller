@@ -800,7 +800,7 @@
         </p>
       </div>
       <div style="display:flex; flex-direction:column; gap:1rem; min-width:220px;">
-        <a href="/cdn-cgi/l/email-protection#d2a1b0b7b7bfbbbebeb7a092b5bfb3bbbefcb1bdbf" class="substack-link"><span>✉</span><span>Send a Note</span></a>
+        <a href="mailto:sbeemiller@gmail.com" class="substack-link"><span>✉</span><span>Send a Note</span></a>
         <a href="https://www.linkedin.com/in/sbeemiller/" target="_blank" class="substack-link"><span>in</span><span>LinkedIn</span></a>
         <a href="https://www.instagram.com/alwaysbeeflowin/" target="_blank" class="substack-link"><span>◎</span><span>Instagram</span></a>
         <a href="https://open.spotify.com/user/sbeemiller" target="_blank" class="substack-link"><span>♫</span><span>Spotify</span></a>
@@ -822,12 +822,22 @@
   </div>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
   // Scroll fade-in
   const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry, i) => {
+    entries.forEach((entry) => {
       if (entry.isIntersecting) {
         setTimeout(() => {
           entry.target.classList.add('visible');
         }, 100);
         observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+  document.querySelectorAll('.fade-up').forEach((el) => {
+    observer.observe(el);
+  });
+</script>
+</body>
+</html>
